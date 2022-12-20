@@ -19,3 +19,8 @@ input CreatePhoneInputType
     ddd : String,
    type : PhoneType
 }
+
+input DeletePhoneInputType
+{
+    id: Int
+}

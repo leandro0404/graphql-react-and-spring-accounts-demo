@@ -2,4 +2,5 @@ type Mutation
 {
     createAccount(account : CreateAccountInputType) :AccountResponseType
     createPhone(phone : CreatePhoneInputType) : PhoneResponseType
+    deletePhone(phone : DeletePhoneInputType) :  Boolean
 }
