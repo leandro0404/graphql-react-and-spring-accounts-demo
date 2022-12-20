@@ -1,0 +1,9 @@
+type AccountResponseType {
+    id : ID,
+    phones : [PhoneResponseType]
+}
+
+input CreateAccountInputType
+{
+    userId : String
+}

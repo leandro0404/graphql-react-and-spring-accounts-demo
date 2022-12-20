@@ -1,9 +1,5 @@
-
-
 type Mutation
 {
-    createPerson(person : CreatePersonInput) :Person
-    createPerson(person : CreatePersonInput) :Person
-    deletePerson(id : Int) : Boolean
-    createDocument (document: DocumentInput ) : Document
+    createAccount(account : CreateAccountInputType) :AccountResponseType
+    createPhone(phone : CreatePhoneInputType) : PhoneResponseType
 }

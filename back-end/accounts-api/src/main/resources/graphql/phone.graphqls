@@ -1,0 +1,21 @@
+enum PhoneType
+{
+    RESIDENTIAL, WORK , COMMERCIAL
+}
+
+type PhoneResponseType {
+    id : ID
+    country : Int,
+    value : String,
+    ddd : String,
+    type : PhoneType
+}
+
+input CreatePhoneInputType
+{
+    account_id: Int,
+    country : Int,
+    value : String,
+    ddd : String,
+   type : PhoneType
+}

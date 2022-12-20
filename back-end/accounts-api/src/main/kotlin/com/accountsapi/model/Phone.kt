@@ -9,19 +9,20 @@ import javax.persistence.*
 @NoArgsConstructor
 @Entity
 @Table(name = "phone")
-class Phone(
-    @field:Column(name="country") private val country :Int,
-    @field:Column(name = "value") private val value: String,
+open class Phone(
+    @field:Column(name="country")  val country :Int,
+    @field:Column(name = "ddd")  val ddd: String,
+    @field:Column(name = "value")  val value: String,
     @field:Column(name = "Type") @field:Enumerated(
         EnumType.STRING
-    ) private val type: PhoneType, @field:JoinColumn(
-        name = "phone_id",
+    )  val type: PhoneType, @field:JoinColumn(
+        name = "account_id",
         nullable = false
     ) @field:ManyToOne private val account: Account
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private val id: Long? = null
+    val id: Long = 0
 
 }
 enum class PhoneType{
