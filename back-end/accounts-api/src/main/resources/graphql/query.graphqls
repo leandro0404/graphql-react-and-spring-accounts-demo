@@ -1,0 +1,4 @@
+type Query {
+    getPersonById(id : Int) :Person
+    getAllPeople: [Person]
+}
