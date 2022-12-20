@@ -11,7 +11,18 @@ function AccountInformation() {
     const {loading, error, data} = useQuery(ACCOUNT_INFORMATION_QUERY);
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
-    return data.findAccount.phones.map( (phone:any) =>
+    
+    var account =  data.findAccount
+
+    var profile = (<div>
+
+    <p> Id :    {account.id}  </p> 
+          <p> Name :    {account.profile.name}  </p>   
+          <p> Email :    {account.profile.email}  </p>  
+          <p> Avatar :   {account.profile.avatar.id}  </p>  
+    </div>)
+    
+    var phones = data.findAccount.phones.map( (phone:any) =>
         <div key={phone.id}>
           <p> Id :    {phone.id}  </p> 
           <p> Country :    {phone.country}  </p>   
@@ -20,6 +31,8 @@ function AccountInformation() {
           <p> Type :    {phone.type}  </p>       
         </div>
     );
+
+    return [profile , phones]
 }
 
 

@@ -1,6 +1,20 @@
 type AccountResponseType {
     id : ID,
+    profile : AccountProfileType,
     phones : [PhoneResponseType]
+}
+
+type AccountProfileType
+{
+    email : String
+    avatar : AccountAvatarType,
+    name: String
+}
+
+type AccountAvatarType
+{
+    id : ID,
+    url: String
 }
 
 input CreateAccountInputType

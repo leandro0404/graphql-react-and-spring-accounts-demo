@@ -4,6 +4,15 @@ export const ACCOUNT_INFORMATION_QUERY = gql`
 query {
   findAccount(id: 1) {
     id
+    profile {
+      email
+      name
+      avatar {
+        id
+        url
+      }
+    }
+
     phones {
       id
       country
